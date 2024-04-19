@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="name">姓名</label>
+        <input type="text" id="name" name="name">
+        <br>
+        <label for="phone">電話</label>
+        <input type="text" id="phone" name="phone">
+        <br>
+        <label for="pw">密碼</label>
+        <input type="password" id="pw" name="pw">
+        <br>
+        <label for="email">email</label>
+        <input type="email" id="email" name="email">
+        <br>
+        <label for="date">日期</label>
+        <!-- <input type="datetime-local" id="date" name="date"> -->
+        <input type="date" id="date" name="date">
+        <br>
+        <label for="qty">庫存</label>
+        <input type="number" id="qty" name="qty">
+        <br>
+
+        <label for="gender">性別</label>
+
+        <input type="radio" id="men" name="gender" value="男">
+        <label for="men">男</label>
+
+        <input type="radio" id="women" name="gender" value="女">
+        <label for="women">女</label>
+
+        <input type="radio" id="unknown" name="gender" value="未知">
+        <label for="unknown">未知</label>
+
+        <br>
+        <label for="">多選</label>
+
+        <input type="checkbox" id="A" name="test[]" value="選項 A">
+        <label for="A">選項 A</label>
+
+        <input type="checkbox" id="B" name="test[]" value="選項 B">
+        <label for="B">選項 B</label>
+
+        <input type="checkbox" id="C" name="test[]" value="選項 C">
+        <label for="C">選項 C</label>
+
+        <br>
+        <label for="edu">學歷</label>
+        <select name="edu" id="edu" >
+            <option value="國小">國小</option>
+            <option value="國中">國中</option>
+            <option value="高中職">高中職</option>
+            <option value="大專院校">大專院校</option>
+            <option value="研究所以上">研究所以上</option>
+        </select>
+        <br>
+
+        <label for="data">test</label>
+        <input type="text" id="data" name="data" list="test_list">
+        <datalist id="test_list">
+            <option value="John">John</option>
+            <option value="Mary">Mary</option>
+            <option value="Amy">Amy</option>
+        </datalist>
+
+        <br>
+        <label for="article">文章</label>
+        <textarea name="article" id="article" cols="30" rows="10"></textarea>
+        <br>
+        <input type="submit" value="送出">
+        <input type="reset" value="清除">
+        <input type="button" value="自訂義">
+        <br>
+        <button type="submit">送出</button>
+        <button type="reset">重設</button>
+        <button type="button">自訂義</button>
+    </form>
+</body>
+</html>
