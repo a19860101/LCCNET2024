@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        img {
+            width: 100%;
+        }
+        .container {
+            width: 1500px;
+            height: 800px;
+            margin-inline: auto;
+            background-color: #ccc;
+            display: flex;
+            flex-direction: column;
+
+            justify-content: space-between;
+            align-items: start;
+            /* 
+                start, end, center
+                space-between, space-around, space-evenly
+            */
+
+        }
+        .box {
+            width: 300px;
+            padding: 15px;
+        }
+        .box:nth-of-type(2) {
+            background-color: #fa0;
+            /* margin-left: auto;
+            margin-right: auto; */
+        }
+        .container-2 {
+            width: 1200px;
+            margin-inline: auto;
+            display: flex;
+
+            align-items: center;
+            /* 
+                start, end, center
+                stretch, baseline
+            */
+        }
+        .box-2 {
+            width: 600px;
+            padding: 15px;
+
+            /* background-color: #fa0; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>hello 1</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro quisquam expedita eligendi ipsa aut maxime rerum itaque laudantium vero animi!
+            </p>
+        </div>
+        <div class="box">
+            <h2>hello 2</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro quisquam expedita eligendi ipsa aut maxime rerum itaque laudantium vero animi!
+            </p>
+        </div>
+        <div class="box">
+            <h2>hello 3</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro quisquam expedita eligendi ipsa aut maxime rerum itaque laudantium vero animi!
+            </p>
+        </div>
+        
+    </div>
+    <div class="container-2">
+        <div class="box-2">
+            <img src="https://picsum.photos/id/32/800" alt="">
+        </div>
+        <div class="box-2">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro repellat ipsa eligendi in officia, possimus voluptas consectetur? Ullam ea eligendi laborum nemo fugit, explicabo fuga in iste laboriosam vitae ducimus.
+            </p>
+            <a href="#">link</a>
+        </div>
+    </div>
+</body>
+</html>

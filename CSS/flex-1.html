@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            width: 1200px;
+            background-color: #ccc;
+            margin-inline: auto;
+
+            display: flex;
+            flex-wrap: wrap;
+            /* 當換行開啟時，壓縮會失效 */
+            flex-direction: row;
+            /* row, column, row-reverse, column-reverse */
+            /* flex-flow:wrap row; */
+        }
+        .box {
+            width: 300px;
+            /* width: 25%; */
+            text-align: justify;
+            padding: 15px;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- @container query -->
+    <div class="container">
+        <div class="box">
+            <h2>hello 1</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro quisquam expedita eligendi ipsa aut maxime rerum itaque laudantium vero animi!
+            </p>
+        </div>
+        <div class="box">
+            <h2>hello 2</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro quisquam expedita eligendi ipsa aut maxime rerum itaque laudantium vero animi!
+            </p>
+        </div>
+        <div class="box">
+            <h2>hello 3</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro quisquam expedita eligendi ipsa aut maxime rerum itaque laudantium vero animi!
+            </p>
+        </div>
+        <div class="box">
+            <h2>hello 4</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro quisquam expedita eligendi ipsa aut maxime rerum itaque laudantium vero animi!
+            </p>
+        </div>
+        <div class="box">
+            <h2>hello 5</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro quisquam expedita eligendi ipsa aut maxime rerum itaque laudantium vero animi!
+            </p>
+        </div>
+        <div class="box">
+            <h2>hello 6</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro quisquam expedita eligendi ipsa aut maxime rerum itaque laudantium vero animi!
+            </p>
+        </div>
+        <div class="box">
+            <h2>hello 7</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro quisquam expedita eligendi ipsa aut maxime rerum itaque laudantium vero animi!
+            </p>
+        </div>
+        <div class="box">
+            <h2>hello 8</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro quisquam expedita eligendi ipsa aut maxime rerum itaque laudantium vero animi!
+            </p>
+        </div>
+    </div>
+</body>
+</html>

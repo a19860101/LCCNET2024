@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            width: 100%;
+        }
+        .container {
+            /* width: 1200px; */
+            /* max-width: 1200px; */
+            width: min(1200px, 100%);
+            margin-inline: auto;
+            background-color: #ccc;
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .col {
+            width: 300px;
+            padding: 15px;
+        }
+        /* .col:nth-of-type(even){background-color: #ffc3c3;} */
+        /* .col:nth-of-type(odd){background-color: #c3eeff;} */
+        .card {
+            background-color: #b3b3b3;
+            /* padding: 15px; */
+            border-radius: 15px;
+            overflow: hidden;
+            /* margin: 15px; */
+        }
+        .card-body {
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"> 
+        <div class="col">
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://picsum.photos/id/98/800" alt="">
+                </div>
+                <div class="card-body">
+                    <h2>card title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error illum esse odio.</p>
+                    <a href="#">Link</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://picsum.photos/id/98/800" alt="">
+                </div>
+                <div class="card-body">
+                    <h2>card title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error illum esse odio.</p>
+                    <a href="#">Link</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://picsum.photos/id/98/800" alt="">
+                </div>
+                <div class="card-body">
+                    <h2>card title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error illum esse odio.</p>
+                    <a href="#">Link</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://picsum.photos/id/98/800" alt="">
+                </div>
+                <div class="card-body">
+                    <h2>card title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error illum esse odio.</p>
+                    <a href="#">Link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
