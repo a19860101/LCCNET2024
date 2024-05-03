@@ -1,0 +1,26 @@
+nav {
+    width: 100%;
+    background-color: #ccc;
+    padding:30px 15px;
+}
+.container {
+    width: 1200px;
+    margin-inline: auto;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    /* background-color: #aaa; */
+}
+.nav-menu {
+    margin-left: auto;
+    display: flex;
+    gap: 15px;
+}
+.nav-link {
+    text-decoration: none;
+    color: #000;
+}
+.nav-logo {
+    text-decoration: none;
+    color: #000;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 2000px;
+        }
+        .rel {
+            width: 200px;
+            height: 200px;
+            background-color: #fa0;
+
+            position: relative;
+            top: 100px;
+            /* bottom: 30px; */
+            left:100px;
+            /* right:-100px; */
+
+            z-index: 3;
+        }
+        .rel-2 {
+            width: 200px;
+            height: 200px;
+            background-color: #098;
+
+            position: relative;
+            z-index: 10;
+        }
+        .abs {
+            width: 200px;
+            height: 200px;
+            background-color: #ff521e;
+
+            position: absolute;
+            bottom: 0;
+            left:0
+        }
+        .wrapper {
+            width: 600px;
+            height: 400px;
+            background-color: #ccc;
+            position: relative;
+        }
+
+        .abs-center {
+            position: fixed;
+            /* top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0; */
+            inset:0;
+            margin: auto;
+            background-color: pink;
+            z-index: 999;
+            width: 300px;
+            height: 300px;
+        }
+        .fixed {
+            width: 100px;
+            height: 100px;
+            background-color: #f00;
+            position: fixed;
+            right: 0;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- 
+        定位position
+        1. 靜態 static
+        2. 相對 relative
+        3. 絕對 absolute
+        4. 固定 fixed
+        5. 黏性 sticky
+
+    -->
+    <div class="rel"></div>
+    <div class="rel-2"></div>
+    <div class="wrapper">
+
+        <div class="abs"></div>
+    </div>
+
+    <div class="abs-center"></div>
+    <div class="fixed"></div>
+</body>
+</html>
