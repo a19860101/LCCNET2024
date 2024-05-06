@@ -75,10 +75,23 @@ header img {
     padding-block: 150px;
 }
 .about-img {
-    width: 50%;
+    width: 60%;
     padding: 30px;
 }
+.about-img img {
+    border-radius:15px;
+}
 .about-content {
-    width: 50%;
+    width: 40%;
     padding: 30px;
+}
+.about-content li {
+    list-style-position: inside;
+}
+.about-content h2 {
+    font-size: 3rem;
+}
+.about-content p {
+    margin-block: 30px;
+    line-height: 1.5rem;
 }
