@@ -70,3 +70,15 @@ header img {
     padding:8px 30px;
     border-radius:5px;
 }
+
+#about {
+    padding-block: 150px;
+}
+.about-img {
+    width: 50%;
+    padding: 30px;
+}
+.about-content {
+    width: 50%;
+    padding: 30px;
+}
