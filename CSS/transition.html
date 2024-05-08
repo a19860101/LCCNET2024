@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: deeppink;
+
+            /* transition: 600ms; */
+            transition-property: all;
+            transition-duration: 1s;
+            transition-delay: 0s;
+            transition-timing-function: cubic-bezier(0,.96,1,-0.02);
+            /* ease, ease-in, ease-out, ease-in-out, linear */
+            /* https://cubic-bezier.com/#0,.96,1,-0.02 */
+
+        
+            transform-origin: left;
+        }
+
+        .box:hover {
+            transform: scaleX(6);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
