@@ -10,12 +10,14 @@
             height: 100px;
             background-color: deeppink;
 
-            /* transition: 600ms; */
-            transition-property: all;
-            transition-duration: 1s;
-            transition-delay: 0s;
-            transition-timing-function: cubic-bezier(0,.96,1,-0.02);
-            /* ease, ease-in, ease-out, ease-in-out, linear */
+            transition: 
+                transform 1s 0s,
+                background-color 1s 1s;
+            /* transition-property: all; */
+            /* transition-duration: 1s; */
+            /* transition-delay: 0s; */
+            /* transition-timing-function: steps(2); */
+            /* ease, ease-in, ease-out, ease-in-out, linear,steps() */
             /* https://cubic-bezier.com/#0,.96,1,-0.02 */
 
         
@@ -24,6 +26,7 @@
 
         .box:hover {
             transform: scaleX(6);
+            background-color: blue;
         }
     </style>
 </head>
