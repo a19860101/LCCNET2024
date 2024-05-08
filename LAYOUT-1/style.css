@@ -1,7 +1,16 @@
+html {
+    scroll-behavior: smooth;
+}
 nav {
     width: 100%;
-    background-color: #ccc;
+    background-color: #cccccc8e;
     padding:30px 15px;
+
+    backdrop-filter: blur(8px);
+
+    position: fixed;
+    z-index: 9999;
+    top:0;
 }
 .container {
     width: 1200px;
@@ -55,23 +64,25 @@ header img {
 .header-caption p {
     margin-bottom: 20px;
 }
-.btn-blue {
+.btn {
     display: inline-block;
     text-decoration: none;
+    color: #000;
+    background-color: #ccc;
+    padding:8px 30px;
+    border-radius:5px;
+    border: 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+.btn-blue {
     color: #fff;
     background-color: #2558c5;
-    padding:8px 30px;
-    border-radius:5px;
 }
 .btn-red {
-    display: inline-block;
-    text-decoration: none;
     color: #fff;
     background-color: #c5253a;
-    padding:8px 30px;
-    border-radius:5px;
 }
-
 #about {
     padding-block: 150px;
 }
@@ -154,3 +165,43 @@ header img {
     width: 300px;
 }
 /* https://colorhunt.co/palette/fefaf6eadbc8dac0a3102c57 */
+
+#contact {
+    padding-block: 150px
+}
+#contact h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 3rem;
+}
+#contact .container {
+    justify-content: center;
+}
+.contact-col {
+    width: 600px;
+}
+.form-control {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    outline:0;
+}
+.form-control:focus {
+    border: 1px solid #c5253a;
+    background-color: #ffd2d2;
+}
+.form-group {
+    margin-bottom: 25px;
+}
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+footer {
+    padding: 20px;
+    background-color: #222;
+    color: #eee;
+    text-align: center;
+}
