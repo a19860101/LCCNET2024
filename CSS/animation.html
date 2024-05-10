@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #a09;
+
+            /* animation: a1 2s 1s forwards linear; */
+            /* animation-name: move; */
+            /* animation-duration: 1s; */
+            /* animation-delay: 0s; */
+            /* animation-direction: normal; */
+            /* normal, reverse, alternate, alternate-reverse */
+            /* animation-iteration-count: 1; */
+            /* animation-fill-mode: forwards; */
+            /* animation-play-state: running; */
+            /* animation-timing-function: ease; */
+            /* ease, ease-in, ease-out, ease-in-out, linear, cubic-bezier() */
+        }
+        .box:hover {
+            animation: move 2s 2s forwards;
+        }
+
+        @keyframes move {
+            to {
+                translate: 100px 0;
+                opacity: 0;
+                rotate: 360deg
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                translate: 0 100px;
+            }
+        }
+        @keyframes a1 {
+            0%{}
+            25%{translate: 400px 0;}
+            50%{translate: 400px 400px;}
+            75%{translate: 0px 400px;}
+            100%{translate: 0px 0px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
