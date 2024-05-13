@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            width: min(1200px, 100%);
+            margin-inline: auto;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .col {flex:1 0 0; }
+        .col-1 {width: calc(100% / 12 * 1);}
+        .col-2 {width: calc(100% / 12 * 2);}
+        .col-3 {width: calc(100% / 12 * 3);}
+        .col-4 {width: calc(100% / 12 * 4);}
+        .col-5 {width: calc(100% / 12 * 5);}
+        .col-6 {width: calc(100% / 12 * 6);}
+        .col-7 {width: calc(100% / 12 * 7);}
+        .col-8 {width: calc(100% / 12 * 8);}
+        .col-9 {width: calc(100% / 12 * 9);}
+        .col-10 {width: calc(100% / 12 * 10);}
+        .col-11 {width: calc(100% / 12 * 11);}
+        .col-12 {width: calc(100% / 12 * 12);}
+        /*xs sm md lg xl xxl 2xl */
+        @media(width > 600px){
+            .col-md {flex:1 0 0;}
+            .col-md-1 {width: calc(100% / 12 * 1);}
+            .col-md-2 {width: calc(100% / 12 * 2);}
+            .col-md-3 {width: calc(100% / 12 * 3);}
+            .col-md-4 {width: calc(100% / 12 * 4);}
+            .col-md-5 {width: calc(100% / 12 * 5);}
+            .col-md-6 {width: calc(100% / 12 * 6);}
+            .col-md-7 {width: calc(100% / 12 * 7);}
+            .col-md-8 {width: calc(100% / 12 * 8);}
+            .col-md-9 {width: calc(100% / 12 * 9);}
+            .col-md-10 {width: calc(100% / 12 * 10);}
+            .col-md-11 {width: calc(100% / 12 * 11);}
+            .col-md-12 {width: calc(100% / 12 * 12);}
+        }
+        @media(width > 1200px){
+            .col-lg {flex:1 0 0;}
+            .col-lg-1 {width: calc(100% / 12 * 1);}
+            .col-lg-2 {width: calc(100% / 12 * 2);}
+            .col-lg-3 {width: calc(100% / 12 * 3);}
+            .col-lg-4 {width: calc(100% / 12 * 4);}
+            .col-lg-5 {width: calc(100% / 12 * 5);}
+            .col-lg-6 {width: calc(100% / 12 * 6);}
+            .col-lg-7 {width: calc(100% / 12 * 7);}
+            .col-lg-8 {width: calc(100% / 12 * 8);}
+            .col-lg-9 {width: calc(100% / 12 * 9);}
+            .col-lg-10 {width: calc(100% / 12 * 10);}
+            .col-lg-11 {width: calc(100% / 12 * 11);}
+            .col-lg-12 {width: calc(100% / 12 * 12);}
+        }
+        /* 屬性選取器 */
+        [class|="col"]{
+            padding: 15px;
+            background-color: #ccc;
+        }
+        /* 
+            ^="col" col...
+            *="col" ...col...
+            $="col" ...col
+            |="col" col-...
+            ~="col" ... col ...
+        */
+    </style>
+</head>
+<body>
+    <div class="container row">
+        <div class="col-lg-3 col-md-6">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quis quia reiciendis neque aliquid nobis atque impedit ex officia veritatis architecto iusto, error accusamus! Sed, modi! Suscipit corrupti ipsum qui.
+            </p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quis quia reiciendis neque aliquid nobis atque impedit ex officia veritatis architecto iusto, error accusamus! Sed, modi! Suscipit corrupti ipsum qui.
+            </p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quis quia reiciendis neque aliquid nobis atque impedit ex officia veritatis architecto iusto, error accusamus! Sed, modi! Suscipit corrupti ipsum qui.
+            </p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quis quia reiciendis neque aliquid nobis atque impedit ex officia veritatis architecto iusto, error accusamus! Sed, modi! Suscipit corrupti ipsum qui.
+            </p>
+        </div>
+    </div>
+    <div class="container row">
+        <div class="col-lg-2 col-md-3">
+            <ul>
+                <li><a href="#">list</a></li>
+                <li><a href="#">list</a></li>
+                <li><a href="#">list</a></li>
+                <li><a href="#">list</a></li>
+                <li><a href="#">list</a></li>
+                <li><a href="#">list</a></li>
+            </ul>
+        </div>
+        <div class="col-lg-10 col-md-9">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, deleniti soluta, mollitia ducimus id repudiandae voluptatum odit quis ratione eligendi minus doloremque! A enim minima doloribus odio, alias error voluptatum.
+            </p>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, deleniti soluta, mollitia ducimus id repudiandae voluptatum odit quis ratione eligendi minus doloremque! A enim minima doloribus odio, alias error voluptatum.
+            </p>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, deleniti soluta, mollitia ducimus id repudiandae voluptatum odit quis ratione eligendi minus doloremque! A enim minima doloribus odio, alias error voluptatum.
+            </p>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, deleniti soluta, mollitia ducimus id repudiandae voluptatum odit quis ratione eligendi minus doloremque! A enim minima doloribus odio, alias error voluptatum.
+            </p>
+        </div>
+    </div>
+    <div class="container row">
+        <div class="col-lg col-md-4 col-6">
+            <h2>title 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium recusandae ipsam assumenda voluptatum. Omnis optio eaque delectus non, laudantium itaque nesciunt consequatur mollitia repellat commodi impedit nulla pariatur? Quidem, blanditiis!
+            </p>
+        </div>
+        <div class="col-lg col-md-4 col-6">
+            <h2>title 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium recusandae ipsam assumenda voluptatum. Omnis optio eaque delectus non, laudantium itaque nesciunt consequatur mollitia repellat commodi impedit nulla pariatur? Quidem, blanditiis!
+            </p>
+        </div>
+        <div class="col-lg col-md-4 col-6">
+            <h2>title 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium recusandae ipsam assumenda voluptatum. Omnis optio eaque delectus non, laudantium itaque nesciunt consequatur mollitia repellat commodi impedit nulla pariatur? Quidem, blanditiis!
+            </p>
+        </div>
+        <div class="col-lg col-md-6 col-6">
+            <h2>title 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium recusandae ipsam assumenda voluptatum. Omnis optio eaque delectus non, laudantium itaque nesciunt consequatur mollitia repellat commodi impedit nulla pariatur? Quidem, blanditiis!
+            </p>
+        </div>
+        <div class="col-lg col-md-6 col-12">
+            <h2>title 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium recusandae ipsam assumenda voluptatum. Omnis optio eaque delectus non, laudantium itaque nesciunt consequatur mollitia repellat commodi impedit nulla pariatur? Quidem, blanditiis!
+            </p>
+        </div>
+    </div>
+    <div class="container .row">
+        <div class="col">
+            <h2>title</h2>
+        </div>
+        <div class="col">
+            <h2>title</h2>
+        </div>
+    </div>
+</body>
+</html>
