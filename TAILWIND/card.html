@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        .btn {
+            @apply inline-block px-6 py-1 bg-zinc-300 rounded-lg hover:bg-blue-300
+        }
+        .my-container {
+            @apply container flex mx-auto;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="btn">Link</a>
+    <div class="my-container">
+        <div class="w-1/4">
+            <div class="border border-red-400 group *:duration-700 ring-0 ring-rose-300 ring-offset-0 hover:ring-4 hover:ring-offset-8 duration-700">
+                <div class="aspect-[4/3] overflow-hidden *:duration-700">
+                    <img src="https://picsum.photos/id/40/300" alt="" class="w-full h-full object-cover group-hover:scale-125">
+                </div>
+                <div class="p-4 space-y-4 group-hover:bg-sky-400 *:duration-700">
+                    <h3 class="text-2xl font-bold group-hover:text-rose-500">card 1</h3>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, nam.
+                    </p>
+                    <a href="#" class="btn group-hover:bg-rose-400">link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

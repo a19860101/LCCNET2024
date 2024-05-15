@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme:{
+                container:{
+                    center:true
+                },
+                extend:{
+                    width:{
+                        '128':'32rem',
+                        '999':'999px'
+                    },
+                    aspectRatio: {
+                        'tv': '4 / 3',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <a href="#" class="btn">link</a>
+    <div class="aspect-tv"></div>
+    <div class="container flex flex-wrap bg-zinc-300">
+        <div class="w-1/3">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore facere ex laudantium nesciunt voluptatum nisi fugiat cupiditate, ipsam tempora vitae.
+            </p>
+        </div>
+        <div class="w-1/3">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore facere ex laudantium nesciunt voluptatum nisi fugiat cupiditate, ipsam tempora vitae.
+            </p>
+        </div>
+        <div class="w-1/3">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore facere ex laudantium nesciunt voluptatum nisi fugiat cupiditate, ipsam tempora vitae.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
