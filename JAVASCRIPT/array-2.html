@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const drinks = ['紅茶','綠茶','奶茶','美式','拿鐵','卡布奇諾'];
+
+        // push() 在陣列最後新增資料
+        drinks.push('烏龍茶','牛奶');
+
+        // pop() 刪除陣列最後一筆資料
+        drinks.pop();
+
+        // unshift() 在陣列最前新增資料
+        drinks.unshift('水');
+
+        // shift() 刪除陣列第一筆資料
+        drinks.shift();
+
+        // length 取得陣列長度
+        // console.log(drinks.length);
+
+        // splice() 拼接
+        // console.log(drinks);
+        // drinks.splice(5,2,'coffee','可樂');
+        // drinks.splice(5,1);
+        // drinks.splice(2,1);
+        
+        // slice() 切片
+        let slice = drinks.slice(1,5)
+        // console.log(slice);
+
+        // toString()轉字串
+        let to_string = drinks.toString();
+        console.log(to_string)
+        
+        // join()轉字串
+        let join = drinks.join('');
+        console.log(join)
+
+        // split()轉陣列
+        let txt = 'hello javascript !!!';
+        console.log(txt.split(' '))
+
+        // reverse() 反轉
+        console.log(drinks.reverse())
+
+        // sort() 排序
+        console.log(drinks.sort());
+
+        let q = ['flower','apple','jacket'];
+        console.log(q);
+        // console.log(q.reverse())
+        // console.log(q.sort());
+        console.log(q.sort().reverse())
+
+        let text = 'hello';
+        console.log(text.split('').reverse().join(''))
+
+
+        // concat() 合併
+        // let concat = drinks.concat(q);
+        let concat = q.concat(drinks)
+        console.log(concat)
+
+        // at() 透過索引尋找內容
+        console.log(drinks.at(5));
+        console.log(drinks);
+    </script>
+</body>
+</html>

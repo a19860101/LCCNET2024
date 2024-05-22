@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const a = new Array();
+        const a = ['紅茶','綠茶'];
+        console.log(a);
+        console.log(a[0]) //陣列索引值
+        console.log(a[1])
+        a[2] = '奶茶'
+        console.log(a[2])
+        a[10] = '拿鐵';
+        console.log(a);
+
+        const drinks = ['紅茶','綠茶','奶茶','美式','拿鐵','卡布奇諾'];
+        // console.log(drinks);
+        //陣列迭代
+        for(let i=0;i<drinks.length;i++){
+            // console.log(i)
+            console.log(drinks[i]);
+        }
+        console.log(drinks.length);   
+        
+        
+        // for...in 取得陣列索引
+        for(let idx in drinks){
+            console.log(idx);
+            console.log(drinks[idx])
+        }
+
+        // for...of 取得陣列內容
+        for(let item of drinks){
+            console.log(item);
+        }
+    </script>
+</body>
+</html>

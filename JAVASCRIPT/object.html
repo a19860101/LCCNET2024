@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const user = new Object();
+        // user.name = 'Mary';
+        // user.mail = 'masd@gmailc.om'
+        const user = {
+            name: 'john',
+            mail: 'asdf@gmail.com',
+            phone: '123123123'
+        }
+        console.log(user);
+        console.log(user.name);
+        console.log(user.mail);
+        console.log(user.phone);
+
+        const drinks = [
+            {
+                name:'紅茶',
+                price: '20'
+            },
+            {
+                name:'綠茶',
+                price: '20'
+            },
+            {
+                name:'奶茶',
+                price: '50'
+            },
+            {
+                name:'拿鐵',
+                price: '80'
+            }
+        ]
+        // console.log(drinks)
+        for(let drink of drinks){
+            console.log(drink.name + '/' + drink.price + '元')
+        }
+    </script>
+</body>
+</html>
