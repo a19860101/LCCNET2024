@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">hello dom</h1>
+    <h2>document object model</h2>
+    <p class="content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit corporis ipsum accusantium illo asperiores, labore doloribus tempore inventore corrupti fugiat, itaque atque illum consequuntur optio explicabo ab ratione cupiditate magnam.
+    </p>
+    <ul class="list">
+        <li class="item">item1</li>
+        <li class="item">item2</li>
+        <li class="item">item3</li>
+        <li class="item">item4</li>
+        <li class="item">item5</li>
+    </ul>
+    <a href="#">link</a>
+    <script>
+        // get element
+
+        let title = document.getElementById('title');
+        // console.log(title)
+
+        // let item = document.getElementsByClassName('item')[4];
+        // console.log(item);
+        
+        // let h2 = document.getElementsByTagName('h2')[0];
+        // console.log(h2);
+
+        // query selector
+
+        // let title = document.querySelector('#title');
+        title.style.color = 'red';
+        title.style.backgroundColor = 'gray';
+        title.style.paddingTop = '20px'
+        console.log(title);
+
+        let items = document.querySelectorAll('.item');
+        let item = document.querySelector('.item');
+        console.log(item);
+        item.style.borderBottom = 'solid red 15px';
+
+        let h2 = document.querySelector('h2');
+        console.log(h2);
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 匿名函式
+        // function(){}
+
+        // 具名
+
+        // 函式宣告式 (提升性) function declaration
+        console.log(foo());
+        function foo(){
+            return 'hello funciton';
+        }
+        // 函式表達式 function expression
+        let foo2 = function(){
+            return 'hello function 2';
+        }
+        console.log(foo2());
+
+        // 箭頭函式 arrow function
+
+        // basic
+        let foo3 = ()=>{
+            return 'arrow function';
+        }
+ 
+        // 只有一個參數 小括號可省略
+        let foo4 = a => {
+            return a;
+        }
+
+        // 只有return時 return與大括號皆可省略
+        let foo5 = () => 'hello'
+
+
+        // let foo6 = function(data){
+        //     return data;
+        // }
+
+        let foo6 = data => data;
+
+        // let foo7 = function(){
+        //     return {
+        //         name:'紅茶',
+        //         price: '20'
+        //     }
+        // }
+        
+        // 當只有一個return而且為物件時
+        let foo7 = () => ({
+                name:'紅茶',
+                price: '20'
+            })
+        
+        
+        let foo8 = () => ({})
+
+        console.log(foo7());
+
+
+        const test = {
+            data: function(){
+                return this;
+            },
+            data2:()=>{
+                return this;
+            }
+        }
+        console.log(test.data());
+        console.log(test.data2());
+
+        /* 
+            this在一般函式下，指向剛剛作用的物件
+            箭頭函式下，永遠指向window物件
+        */
+    </script>
+</body>
+</html>

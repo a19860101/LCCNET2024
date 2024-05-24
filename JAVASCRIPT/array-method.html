@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          const drinks = [
+            {
+                name:'紅茶',
+                price: '20'
+            },
+            {
+                name:'綠茶',
+                price: '20'
+            },
+            {
+                name:'奶茶',
+                price: '50'
+            },
+            {
+                name:'拿鐵',
+                price: '80'
+            },
+            {
+                name:'波霸奶茶',
+                price: '300'
+            }
+        ];
+        // forEach
+        // drinks.forEach(function(drink,idx){
+        //     console.log(idx);
+        //     console.log(drink.name);
+        //     console.log(drink.price);
+            
+        // });
+
+        // map
+        let map = drinks.map(function(data){
+            return data.name;
+        })
+        console.log(map)
+        let price = drinks.map(function(data){
+            return data.price;
+        })
+        console.log(price);
+
+        // filter
+
+        let filter = drinks.filter(function(data){
+            return data.price >= 50;
+        })
+        let del = drinks.filter(function(data){
+            return data.name != '拿鐵';
+        })
+        console.log(del);
+
+        // find
+        let find = drinks.find(function(data){
+            return data.price === '20';
+        })
+        console.log(find);
+        // findIndex
+
+        let findIndex = drinks.findIndex(function(data){
+            return data.name === '拿鐵';
+        })
+        console.log(findIndex);
+
+        // every 每一個都要符合 回傳布林
+        let every = drinks.every(function(data){
+            return data.price > 0;
+        })
+        console.log(every);
+        // some 部分符合 回傳布林
+
+        let some = drinks.some(function(data){
+            return data.price > 0;
+        })
+        console.log(some)
+
+        // reduce()
+        let nums = [2,3,8,4,1];
+        let reduce = nums.reduce(function(a,b){
+            console.log(a,b)
+            return a + b;
+        })
+        console.log(reduce)
+
+        let total = drinks.map(function(data){
+            return data.price;
+        }).reduce(function(a,b){
+            return Number(a)+Number(b);
+        })
+        console.log(total);
+
+    </script>
+</body>
+</html>
