@@ -42,28 +42,39 @@
 <body>
     <div class="tab">
         <div class="tab-nav">
-            <a href="#" class="tab-link active">Tab 1</a>
-            <a href="#" class="tab-link">Tab 2</a>
-            <a href="#" class="tab-link">Tab 3</a>
+            <a href="#tab-1" class="tab-link active">Tab 1</a>
+            <a href="#tab-2" class="tab-link">Tab 2</a>
+            <a href="#tab-3" class="tab-link">Tab 3</a>
         </div>
-        <div class="tab-panel active">
+        <div class="tab-panel active" id="tab-1">
             <h2>Tab 1</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum corporis, similique pariatur, modi consequatur placeat debitis dignissimos non molestias hic quis voluptatibus eius. Quos eveniet veniam, dicta ex repellendus deserunt?
             </p>
         </div>
-        <div class="tab-panel">
+        <div class="tab-panel" id="tab-2">
             <h2>Tab 2</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum nesciunt doloremque magnam nemo provident, laudantium laboriosam ut. Adipisci soluta voluptatum hic expedita fugit distinctio sapiente perferendis nam iusto voluptas exercitationem beatae eligendi deserunt optio provident aliquam animi dolore recusandae magni quam dolorem, sed quae! Facere nisi perferendis corrupti assumenda vitae?
             </p>
         </div>
-        <div class="tab-panel">
+        <div class="tab-panel" id="tab-3">
             <h2>Tab 3</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores optio, neque alias repellendus veritatis eveniet, voluptatem velit incidunt, quis esse nemo ad laboriosam. Dolor.
             </p>
         </div>
     </div>
+    <script>
+        let tabLinks = document.querySelectorAll('.tab-link');
+        for(let tabLink of tabLinks){
+            tabLink.onclick = function(){
+                let panel = this.getAttribute('href');
+                console.log(panel)
+                document.querySelector('.tab-panel.active').classList.remove('active');
+                document.querySelector(panel).classList.add('active');
+            }
+        }
+    </script>
 </body>
 </html>
