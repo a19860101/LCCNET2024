@@ -87,18 +87,21 @@
         let sliderItems = document.querySelectorAll('.slider-item');
         let total = sliderItems.length;
         let currentIndex = 0;
-        let timeout = 2000;
+        let timeout = 5000;
         let next = document.querySelector('.slider-next');
         let prev = document.querySelector('.slider-prev');
 
         //下一張
         next.onclick = function(){
             slider();
+            resetTimer()
         }
 
         // 上一張
         prev.onclick = function(){
-            slider('prev')
+            slider('prev');
+            resetTimer()
+
         }
 
         function slider(direction){
@@ -126,7 +129,13 @@
             sliderItems[currentIndex].classList.add('active');
         }
 
-        setInterval(slider,timeout);
+        // 計時器
+        let timer = setInterval(slider,timeout);
+
+        function resetTimer(){
+            clearInterval(timer);
+            timer = setInterval(slider,timeout);
+        }
 
        
     </script>
