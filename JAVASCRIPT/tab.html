@@ -24,6 +24,10 @@
             text-decoration: none;
             padding: 8px 20px;
         }
+        .tab-link.active {
+            background-color: #ffe6a1;
+            color: #222;
+        }
         .tab-link:hover {
             background-color: #ffe6a1;
             color: #222;
@@ -33,6 +37,7 @@
             background-color: #ffe6a1;
             position: absolute;
             display: none;
+            width: 100%;
         }
         .tab-panel.active {
             display: block;
@@ -42,9 +47,10 @@
 <body>
     <div class="tab">
         <div class="tab-nav">
-            <a href="#tab-1" class="tab-link active">Tab 1</a>
-            <a href="#tab-2" class="tab-link">Tab 2</a>
-            <a href="#tab-3" class="tab-link">Tab 3</a>
+            <a href="#tab-1" data-panel="#tab-1" data-title="123" class="tab-link active">Tab 1</a>
+            <a href="#tab-2" data-panel="#tab-2" data-title="546" class="tab-link">Tab 2</a>
+            <a href="#tab-3" data-panel="#tab-3" data-title="789" class="tab-link">Tab 3</a>
+            <a href="#tab-4" data-panel="#tab-4" data-title="789" class="tab-link">Tab 4</a>
         </div>
         <div class="tab-panel active" id="tab-1">
             <h2>Tab 1</h2>
@@ -64,12 +70,19 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores optio, neque alias repellendus veritatis eveniet, voluptatem velit incidunt, quis esse nemo ad laboriosam. Dolor.
             </p>
         </div>
+        <div class="tab-panel" id="tab-4">
+            <h2>Tab 3</h2>
+            <img src="https://picsum.photos/400" alt="">
+        </div>
     </div>
     <script>
         let tabLinks = document.querySelectorAll('.tab-link');
         for(let tabLink of tabLinks){
             tabLink.onclick = function(){
-                let panel = this.getAttribute('href');
+                document.querySelector('.tab-link.active').classList.remove('active');
+                this.classList.add('active')
+                // let panel = this.getAttribute('href');
+                let panel = this.dataset.panel;
                 console.log(panel)
                 document.querySelector('.tab-panel.active').classList.remove('active');
                 document.querySelector(panel).classList.add('active');
