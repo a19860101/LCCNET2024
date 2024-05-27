@@ -23,6 +23,7 @@
             color: #eee;
             text-decoration: none;
             padding: 8px 20px;
+            transition:500ms;
         }
         .tab-link.active {
             background-color: #ffe6a1;
@@ -36,11 +37,16 @@
             padding: 20px;
             background-color: #ffe6a1;
             position: absolute;
-            display: none;
             width: 100%;
+            /* display: none; */
+            visibility: hidden;
+            opacity: 0;
+            transition: 500ms;
         }
         .tab-panel.active {
-            display: block;
+            /* display: block; */
+            visibility: visible;
+            opacity: 1;
         }
     </style>
 </head>
