@@ -103,7 +103,7 @@
             resetTimer()
 
         }
-
+        // 輪播
         function slider(direction){
             // if(currentIndex===total-1){
             //     currentIndex = 0;
@@ -131,7 +131,7 @@
 
         // 計時器
         let timer = setInterval(slider,timeout);
-
+        // 重置計時器
         function resetTimer(){
             clearInterval(timer);
             timer = setInterval(slider,timeout);
