@@ -87,7 +87,7 @@
         let sliderItems = document.querySelectorAll('.slider-item');
         let total = sliderItems.length;
         let currentIndex = 0;
-        let timeout = 500;
+        let timeout = 2000;
         let next = document.querySelector('.slider-next');
         let prev = document.querySelector('.slider-prev');
 
@@ -98,6 +98,8 @@
                 currentIndex++;
             }
             console.log(currentIndex)
+            document.querySelector('.slider-item.active').classList.remove('active')
+            sliderItems[currentIndex].classList.add('active');
         }
 
         setInterval(slider,timeout);
