@@ -91,13 +91,37 @@
         let next = document.querySelector('.slider-next');
         let prev = document.querySelector('.slider-prev');
 
-        function slider(){
-            if(currentIndex===total-1){
-                currentIndex = 0;
+        //下一張
+        next.onclick = function(){
+            slider();
+        }
+
+        // 上一張
+        prev.onclick = function(){
+            slider('prev')
+        }
+
+        function slider(direction){
+            // if(currentIndex===total-1){
+            //     currentIndex = 0;
+            // }else{
+            //     currentIndex++;
+            // }
+            if(direction === 'prev'){
+                currentIndex = currentIndex === 0 ? total : currentIndex;
+                currentIndex = (currentIndex - 1) % total;
             }else{
-                currentIndex++;
+                currentIndex = (currentIndex + 1) % total;
             }
+
+            
+
             console.log(currentIndex)
+            switchImage()
+        }
+
+        // 切換圖片
+        function switchImage(){
             document.querySelector('.slider-item.active').classList.remove('active')
             sliderItems[currentIndex].classList.add('active');
         }
