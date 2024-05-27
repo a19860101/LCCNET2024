@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .tab {
+            width: 600px;
+            margin-inline: auto;
+            position: relative;
+        }
+        .tab-nav {
+            background-color: #333;
+            display: flex;
+        }
+        .tab-link {
+            color: #eee;
+            text-decoration: none;
+            padding: 8px 20px;
+        }
+        .tab-link:hover {
+            background-color: #ffe6a1;
+            color: #222;
+        }
+        .tab-panel {
+            padding: 20px;
+            background-color: #ffe6a1;
+            position: absolute;
+            display: none;
+        }
+        .tab-panel.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab">
+        <div class="tab-nav">
+            <a href="#" class="tab-link active">Tab 1</a>
+            <a href="#" class="tab-link">Tab 2</a>
+            <a href="#" class="tab-link">Tab 3</a>
+        </div>
+        <div class="tab-panel active">
+            <h2>Tab 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum corporis, similique pariatur, modi consequatur placeat debitis dignissimos non molestias hic quis voluptatibus eius. Quos eveniet veniam, dicta ex repellendus deserunt?
+            </p>
+        </div>
+        <div class="tab-panel">
+            <h2>Tab 2</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum nesciunt doloremque magnam nemo provident, laudantium laboriosam ut. Adipisci soluta voluptatum hic expedita fugit distinctio sapiente perferendis nam iusto voluptas exercitationem beatae eligendi deserunt optio provident aliquam animi dolore recusandae magni quam dolorem, sed quae! Facere nisi perferendis corrupti assumenda vitae?
+            </p>
+        </div>
+        <div class="tab-panel">
+            <h2>Tab 3</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores optio, neque alias repellendus veritatis eveniet, voluptatem velit incidunt, quis esse nemo ad laboriosam. Dolor.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
