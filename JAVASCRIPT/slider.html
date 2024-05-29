@@ -54,7 +54,21 @@
         .slider-nav i {
             color: #000;
         }
-
+        .slider-dots {
+            width: 100%;
+            background-color: #ccc;
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            background-color: #f00;
+            border-radius: 50%;
+        }
     </style>
 </head>
 <body>
@@ -137,6 +151,15 @@
             timer = setInterval(slider,timeout);
         }
 
+        // 建立dot
+
+        for(let i=0;i<total;i++){
+            let dot = document.createElement('span');
+            dot.classList.add('slider-dot');
+            dot.dataset.index = i;
+            document.querySelector('.slider-dots').append(dot);
+
+        }
        
     </script>
 </body>
