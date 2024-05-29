@@ -65,7 +65,7 @@
                 let panel = this.nextElementSibling;
                 console.log(panel.scrollHeight);
                 if(panel.style.height){
-                    document.querySelector('.collapse-panel.active').classList.remove('active');
+                    panel.classList.remove('active');
                     panel.style.height = null;
                     // panel.style.paddingBlock = 0
                 }else{
