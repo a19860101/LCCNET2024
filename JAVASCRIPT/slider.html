@@ -68,7 +68,15 @@
             height: 12px;
             background-color: #f00;
             border-radius: 50%;
+            cursor: pointer;
+            transition: 600ms
         }
+        .slider-dot:hover {
+            background-color: #0af;
+        }
+        .slider-dot.active {
+            background-color: #0af;
+        } 
     </style>
 </head>
 <body>
@@ -134,7 +142,8 @@
             
 
             console.log(currentIndex)
-            switchImage()
+            switchImage();
+            switchDot();
         }
 
         // 切換圖片
@@ -161,6 +170,24 @@
 
         }
        
+        // 設定dot功能
+        let dots = document.querySelectorAll('.slider-dot');
+        dots[0].classList.add('active');
+        for(let dot of dots){
+            dot.onclick = function(){
+                currentIndex = this.dataset.index
+                console.log(currentIndex)
+                switchImage();
+                resetTimer()
+                switchDot()
+            }
+        }
+
+        // 切換樣式
+        function switchDot(){
+            document.querySelector('.slider-dot.active').classList.remove('active');
+            dots[currentIndex].classList.add('active');
+        }
     </script>
 </body>
 </html>
