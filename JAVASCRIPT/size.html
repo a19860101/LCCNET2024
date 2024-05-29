@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+            box-sizing: border-box;
+        }
+        .box {
+            width: 600px;
+            height: 100px;
+            margin-inline: auto;
+
+            background-color: #ccc;
+            padding-top: 30px;
+            padding-bottom:30px;
+
+            border-bottom: 10px solid #000;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>title</h2>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab amet tenetur omnis, delectus accusamus placeat aspernatur quidem libero porro, nostrum accusantium neque vel minima quisquam asperiores voluptas sit animi corporis.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab amet tenetur omnis, delectus accusamus placeat aspernatur quidem libero porro, nostrum accusantium neque vel minima quisquam asperiores voluptas sit animi corporis.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab amet tenetur omnis, delectus accusamus placeat aspernatur quidem libero porro, nostrum accusantium neque vel minima quisquam asperiores voluptas sit animi corporis.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab amet tenetur omnis, delectus accusamus placeat aspernatur quidem libero porro, nostrum accusantium neque vel minima quisquam asperiores voluptas sit animi corporis.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab amet tenetur omnis, delectus accusamus placeat aspernatur quidem libero porro, nostrum accusantium neque vel minima quisquam asperiores voluptas sit animi corporis.
+        </p>
+    </div>
+    <script>
+        let el = document.querySelector('.box');
+        // console.log(el.clientWidth);
+        // console.log(el.offsetWidth);
+        // console.log(el.scrollWidth);
+        console.log(el.clientHeight); // 元素本體+內距
+        console.log(el.offsetHeight); // 元素本體+內距+邊框
+        console.log(el.scrollHeight); // 元素本體+內距+邊框+超出範圍的部分
+    </script>
+</body>
+</html>

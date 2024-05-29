@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .collapse {
+            width: 600px;
+            margin: auto;
+        }
+        .collapse-btn {
+            background-color: #ccc;
+            padding: 15px;
+            border-bottom: 2px solid #aaa;
+            cursor: pointer;
+        }
+        .collapse-btn:hover {
+            background-color: #ffc354;
+        }
+        .collapse-panel {
+            background-color: #fff67f;
+            padding-inline:15px;
+            padding-block:0;
+            height: 0;
+            overflow: hidden;
+            transition: 600ms;
+
+            box-sizing: content-box;
+        }
+        .collapse-panel.active {
+            padding-block: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="collapse">
+        <h2 class="collapse-btn">title 1</h2>
+        <div class="collapse-panel">
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque temporibus repellendus, ipsam perspiciatis earum ab sunt aliquid veniam veritatis numquam? Quibusdam delectus distinctio nulla nihil numquam, cupiditate incidunt veritatis quae?
+            </p>
+        </div>
+        <h2 class="collapse-btn">title 2</h2>
+        <div class="collapse-panel">
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit ratione perferendis eveniet non ullam sunt, natus voluptas debitis doloremque nulla esse optio et nemo saepe nihil quae recusandae explicabo? Ipsa explicabo ducimus aliquid autem voluptatum animi dolor veritatis error! Odio?
+            </p>
+        </div>
+        <h2 class="collapse-btn">title 3</h2>
+        <div class="collapse-panel">
+            <img src="https://picsum.photos/400" alt="">
+            
+        </div>
+    </div>
+    <script>
+        let btns = document.querySelectorAll('.collapse-btn');
+        for(let btn of btns){
+            btn.onclick = function(){
+                let panel = this.nextElementSibling;
+                console.log(panel.scrollHeight);
+                if(panel.style.height){
+                    document.querySelector('.collapse-panel.active').classList.remove('active');
+                    panel.style.height = null;
+                    // panel.style.paddingBlock = 0
+                }else{
+                    panel.style.height = panel.scrollHeight + 'px';
+                    panel.classList.add('active');
+                    // panel.style.paddingBlock = '30px'
+                }
+            }
+        }
+    </script>
+</body>
+</html>
