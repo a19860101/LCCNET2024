@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <div class="container mx-auto flex flex-wrap">
+
+    </div>
+    <script>
+        let animal = 'https://data.moa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL&IsTransData=1';
+        let ubike = 'https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json';
+        let aqi = 'https://data.moenv.gov.tw/api/v2/aqx_p_432?api_key=e8dd42e6-9b8b-43f8-991e-b3dee723a52d&limit=1000&sort=ImportDate%20desc&format=JSON';
+        fetch(ubike).then(function(res){
+            return res.json();
+        }).then(function(data){
+            for(let u of data){
+                console.log(u)
+                let container = document.querySelector('.container');
+                
+                let box = document.createElement('div');
+                box.classList.add('w-1/5','p-5','border');
+        
+
+                let sna = document.createElement('div');
+                sna.classList.add('sna');
+                sna.append('站點名稱:'+u.sna);
+
+                let rent = document.createElement('div');
+                rent.classList.add('rent');
+                rent.append('可租借車輛:'+u.available_rent_bikes);
+
+                box.append(sna,rent);
+
+                container.append(box);
+            }
+        })
+    </script>
+</body>
+</html>

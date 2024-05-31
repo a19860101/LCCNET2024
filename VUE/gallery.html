@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+<body>
+    <div id="app" class="w-[600px] mx-auto">
+        <div>
+            <img :src="imgs[currentIndex]" alt="">
+        </div>
+        <div class="flex">
+            <div v-for="img,idx in imgs" class="w-1/5" @click="switchIndex(idx)">
+                <img :src="img" alt="" class="w-full">
+            </div>
+        </div>
+    </div>
+    <script>
+        Vue.createApp({
+            data(){
+                return {
+                    imgs:[
+                        'https://picsum.photos/id/40/600',
+                        'https://picsum.photos/id/41/600',
+                        'https://picsum.photos/id/42/600',
+                        'https://picsum.photos/id/43/600',
+                        'https://picsum.photos/id/44/600',
+                    ],
+                    currentIndex:0
+                }
+            },
+            methods:{
+                switchIndex(idx){
+                    console.log(idx);
+                    this.currentIndex = idx
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html>

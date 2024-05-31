@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        .red {
+            color: red;
+        }
+        .green {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>{{title}}</h1>
+        <ul>
+            <li v-for="p,idx in products">{{idx}},{{p}}</li>
+        </ul>
+        <ul>
+            <li v-for="d,idx in drinks">
+                {{idx}}.{{d.name}} / $.{{d.price}}
+            </li>
+        </ul>
+        <a v-bind:href="link">Yahoo</a>
+        <img :src="gallery" :alt="alttext" :title="alttext">
+        <form action="">
+            <input type="text" v-model="title">
+            <input type="checkbox" v-model="items" value="apple">
+            <input type="checkbox" v-model="items" value="banana">
+            <input type="checkbox" v-model="items" value="cat">
+        </form>
+        {{items}}
+        <a href="#" @click="isRed = !isRed">red</a>
+        <a href="#" @click="isGreen = !isGreen">green</a>
+        <p :class="{red:isRed}">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, ipsam. Doloribus alias consectetur minima sint, illum vitae fugit libero provident eos iusto, eligendi delectus qui incidunt assumenda, rerum eum asperiores.
+        </p>
+        <p :class="{green:isGreen}">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, ipsam. Doloribus alias consectetur minima sint, illum vitae fugit libero provident eos iusto, eligendi delectus qui incidunt assumenda, rerum eum asperiores.
+        </p>
+        <button @click="test()">click</button>
+    </div>
+    <script>
+        Vue.createApp({
+            data(){
+                return {
+                    active:false,
+                    isRed: false,
+                    isGreen: false,
+                    gallery:'https://picsum.photos/id/40/300',
+                    alttext:'貓',
+                    link: 'https://tw.yahoo.com',
+                    title: 'Hello VUE',
+                    items:[],
+                    products:['apple','banana','cat','qoo','eee','asdf'],
+                    drinks:[
+                        {
+                            name:'紅茶',
+                            price: '20'
+                        },
+                        {
+                            name:'綠茶',
+                            price: '20'
+                        },
+                        {
+                            name:'奶茶',
+                            price: '50'
+                        },
+                        {
+                            name:'拿鐵',
+                            price: '80'
+                        },
+                        {
+                            name:'波霸奶茶',
+                            price: '300'
+                        }
+                    ]
+                }
+            },
+            methods:{
+                test(){
+                    this.isRed = !this.isRed,
+                    this.isGreen = !this.isGreen
+                }
+            }
+        }).mount('#app');
+
+    </script>
+</body>
+</html>
