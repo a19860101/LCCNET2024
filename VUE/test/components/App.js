@@ -13,6 +13,8 @@ export default {
     components:{
         'app-title':AppTitle,
         'app-btn':AppBtn
+        // AppTitle,
+        // AppBtn
     },
 
 }

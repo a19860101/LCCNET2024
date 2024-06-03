@@ -1,10 +1,11 @@
-import Todos from './Todos.js'
+import AppTodos from './Todos.js'
 export default {
     components:{
-        'todos':Todos,
+        // 'app-todos':AppTodos
+        AppTodos,
     },
     template:`
-        <todos></todos>
+        <app-todos></app-todos>
     `,
     data(){
         return {}
