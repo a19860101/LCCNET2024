@@ -7,7 +7,7 @@ export default {
             <input type="submit" value="新增項目">
         </form>
 
-        <todo-list :filter="filter"></todo-list>
+        <todo-list :list="filter"></todo-list>
 
         <h2 v-if="filter.todoCompleted.length">已完成 ({{filter.todoCompleted.length}})</h2>
         <ul>
