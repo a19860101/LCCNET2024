@@ -7,15 +7,11 @@ export default {
             <input type="submit" value="新增項目">
         </form>
 
-        <todo-list :list="filter"></todo-list>
+        <todo-list :list="filter.all" title="所有項目"></todo-list>
+        <todo-list :list="filter.todoUnCompleted" title="未完成"></todo-list>
+        <todo-list :list="filter.todoCompleted" title="已完成"></todo-list>
 
-        <h2 v-if="filter.todoCompleted.length">已完成 ({{filter.todoCompleted.length}})</h2>
-        <ul>
-            <li v-for="todo in filter.todoCompleted" :key="todo.id">
-                {{todo.name}}
-                <input type="checkbox" v-model="todo.isCompleted">
-            </li>
-        </ul>
+
     `,
     data(){
         return {
@@ -53,7 +49,8 @@ export default {
         filter(){
             return {
                 todoCompleted:this.todos.filter(data=>data.isCompleted === true),
-                todoUnCompleted:this.todos.filter(data=>data.isCompleted === false)
+                todoUnCompleted:this.todos.filter(data=>data.isCompleted === false),
+                all:this.todos
             }
         },
         todoCompleted(){
