@@ -1,11 +1,10 @@
+import Todo from './Todo.js'
 export default {
+    components:{Todo},
     template:`
         <h2 v-if="list.length">{{title}} ({{list.length}})</h2>
         <ul>
-            <li v-for="todo in list" :key="todo.id">
-                {{todo.name}}
-                <input type="checkbox" v-model="todo.isCompleted">
-            </li>
+            <todo v-for="todo in list" :key="todo.id" :item="todo"></todo>
         </ul>
     `,
     props:{
