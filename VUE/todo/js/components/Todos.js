@@ -1,11 +1,9 @@
 import TodoList from './TodoList.js'
+import TodoCreate from './TodoCreate.js'
 export default {
-    components:{TodoList},
+    components:{TodoList,TodoCreate},
     template:`
-        <form action="" @submit.prevent="addTodo()">
-            <input type="text" v-model="input">
-            <input type="submit" value="新增項目">
-        </form>
+        <todo-create @add="addTodo"></todo-create>
 
         <todo-list :list="filter.all" title="所有項目"></todo-list>
         <todo-list :list="filter.todoUnCompleted" title="未完成"></todo-list>
@@ -15,7 +13,6 @@ export default {
     `,
     data(){
         return {
-            input:'',
             todos:[
                 {
                     id:1,/* 主鍵 */
@@ -36,13 +33,13 @@ export default {
         }
     },
     methods:{
-        addTodo(){
+        addTodo(data){
+            console.log(data)
             this.todos.push({
                 id:Date.now(),
-                name:this.input,
+                name:data,
                 isCompleted:false,
             });
-            this.input='';
         }
     },
     computed:{
