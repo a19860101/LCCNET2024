@@ -1,16 +1,14 @@
+import TodoList from './TodoList.js'
 export default {
+    components:{TodoList},
     template:`
         <form action="" @submit.prevent="addTodo()">
             <input type="text" v-model="input">
             <input type="submit" value="新增項目">
         </form>
-        <h2 v-if="filter.todoUnCompleted.length">未完成 ({{filter.todoUnCompleted.length}})</h2>
-        <ul>
-            <li v-for="todo in filter.todoUnCompleted" :key="todo.id">
-                {{todo.name}}
-                <input type="checkbox" v-model="todo.isCompleted">
-            </li>
-        </ul>
+
+        <todo-list :filter="filter"></todo-list>
+
         <h2 v-if="filter.todoCompleted.length">已完成 ({{filter.todoCompleted.length}})</h2>
         <ul>
             <li v-for="todo in filter.todoCompleted" :key="todo.id">
