@@ -1,22 +1,14 @@
-
 <script>
+  // import Todos from './components/Todos.vue'
+  import Weathers from './components/Weathers.vue'
   export default {
-    data(){
-      return {
-        title: 'Hello Vue 123'
-      }
-    },
-    methods:{
-      test(){
-        alert('hello methods');
-      }
-    }
+    components:{Weathers}
+
   }
 </script>
 
 <template>
-  <h1>{{ title }}</h1>
-  <a href="#" @click="test()">click</a>
+  <Weathers></Weathers>
 </template>
 
 
