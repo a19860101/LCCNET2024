@@ -10,8 +10,13 @@
         <!-- <option value="bangkok">曼谷</option> -->
     </select>
     <div v-if="weather">
-        {{ selectedCity }} / {{ list.find(data=>data.val === city).text }}
-        <img :src="`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`" alt="">
+        <h2>{{ selectedCity }} / {{ list.find(data=>data.val === city).text }}</h2>
+        <div>
+            <img :src="`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`" alt="">
+        </div>
+        <div>
+            <img :src="icon" alt="">
+        </div>
         <div>目前天氣:{{ weather.weather[0].description }}</div>
         <div>平均溫度:{{weather.main.temp}}&deg;C</div>
         <div>體感溫度:{{weather.main.feels_like}}&deg;C</div>
@@ -53,7 +58,9 @@
                 }
             },
             icon(){
-                
+                if(this.city){
+                    return `https://openweathermap.org/img/wn/${this.weather.weather[0].icon}@2x.png`
+                }
             }
         },  
         created(){
