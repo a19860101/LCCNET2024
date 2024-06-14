@@ -9,6 +9,7 @@
 <template>
   <Nav></Nav>
   <Header></Header>
+  <router-view></router-view>
 </template>
 
 <style>
