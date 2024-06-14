@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #fa0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <script>
+        // gsap.from('.box',{
+        //     opacity: 0,
+        //     delay:1,
+        //     duration:1,
+
+        // });
+        gsap.to('.box',{
+            x:500,
+            duration: 2,
+            delay:1,
+            // repeat: 1,
+            ease: "steps(8)"
+        });
+        // gsap.fromTo('.box',{
+        //     x:-600
+        // },{
+        //     x:600,
+        //     duration: 5
+        // })
+    </script>
+</html>
