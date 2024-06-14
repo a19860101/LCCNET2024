@@ -17,14 +17,16 @@
 </template>
 
 <style>
-  .v-enter-active,
+  .v-enter-active{
+    transition: all 0.7s 0.7s ease;
+  }
   .v-leave-active {
-    transition: all 0.5s ease;
+    transition: all 0.7s ease;
   }
 
   .v-enter-from,
   .v-leave-to {
     opacity: 0;
-    transform: translateY(100px)
+    /* transform: translateY(100px); */
   }
 </style>
