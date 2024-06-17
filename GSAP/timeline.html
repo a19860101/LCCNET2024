@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Hello GSAP</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis corporis fugiat enim, sit voluptas in asperiores recusandae accusamus alias, qui earum iusto. Facilis maiores repudiandae, illum quia est quaerat temporibus.
+        </p>
+        <a href="#">link</a>
+    </div>
+    <script>
+        // gsap.from('h1',{opacity:0,duration:.5});
+        // gsap.from('p',{opacity:0,duration:.5,delay:.5});
+        // gsap.from('a',{opacity:0,duration:.5,delay:1});
+
+        gsap.defaults({duration:1});
+
+        // gsap.timeline()
+        // .from('h1',{opacity:0,y:50})
+        // .from('p',{opacity:0,x:50,duration:2})
+        // .from('a',{opacity:0,y:50})
+
+        let tl = gsap.timeline()
+
+        tl
+        .from('h1',{opacity:0,y:50})
+        .from('p',{opacity:0,x:50,duration:2})
+        .from('a',{opacity:0,y:50})
+    </script>
+</body>
+</html>
