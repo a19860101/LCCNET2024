@@ -22,7 +22,7 @@
         h1 {
             font-size: 120px;
         }
-        #s2 {
+        section{
             width: 100%;
             height: 100vh;
         }
@@ -57,11 +57,12 @@
             <img src="images//right.png" alt="" class="right">
         </div>
     </section>
+    <section id="s3"></section>
     <script>
         gsap.to('h1',{
             scrollTrigger:{
                 trigger:'header',
-                markers: true,
+                // markers: true,
                 start:'top',
                 // end:'center',
                 scrub:true
@@ -70,6 +71,17 @@
             opacity:0,
             rotate:180
         })
+        gsap
+        .timeline({
+            scrollTrigger:{
+                trigger:'#s2',
+                start:'top 80%',
+                scrub:true,
+                markers: true
+            }
+        })
+        .to('.right',{y:200,rotate:-15})
+        .to('.left',{y:-200,rotate:15})
     </script>
 </body>
 </html>
