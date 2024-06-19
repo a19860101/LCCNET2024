@@ -37,7 +37,7 @@
             position: absolute;
             right: 0;
             top: 0;
-            transform: translateY(-10%);
+            transform: translateY(-40%);
         }
         .left {
             position: absolute;
@@ -75,13 +75,13 @@
         .timeline({
             scrollTrigger:{
                 trigger:'#s2',
-                start:'top 80%',
+                start:'top 100%',
                 scrub:true,
                 markers: true
             }
         })
-        .to('.right',{y:200,rotate:-15})
-        .to('.left',{y:-200,rotate:15})
+        .from('.right',{y:100})
+        .from('.left',{y:-200},0)
     </script>
 </body>
 </html>
