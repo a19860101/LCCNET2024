@@ -105,6 +105,19 @@
         })
         .from('.right',{y:100})
         .from('.left',{y:-200},0)
+
+        gsap.timeline({
+            scrollTrigger:{
+                trigger:'#s3',
+                markers: true,
+                start:'top 50%',
+                end:'50% 50%',
+                scrub:true,
+
+            }
+        })
+        .from('.s3-right',{scale:.8,opacity:0,x:100})
+        .from('h2',{scale:.9,opacity:0,x:-100})
     </script>
 </body>
 </html>
