@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
     <style>
+        body {
+            height: 2000px;
+        }
         .box {
             width: 100px;
             height: 100px;
@@ -18,17 +22,26 @@
     <div class="box"></div>
     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 400"><path id="path" d="M51.12107467651367,126.4573974609375C68.60986518859863,146.78624725341797,116.14350573221842,252.615847269694,156.05381774902344,248.4304962158203C195.96412976582846,244.24514516194662,251.42001597086588,91.47982025146484,290.58294677734375,101.34529113769531C329.7458775838216,111.21076202392578,349.92527262369794,306.2780303955078,391.0314025878906,307.6233215332031C432.1375325520833,308.96861267089844,491.4798227945964,109.86546834309895,537.2197265625,109.41703796386719C582.9596303304037,108.96860758463542,635.7249348958334,292.9745915730794,665.4708251953125,304.9327392578125C695.2167154947916,316.8908869425456,707.3243611653646,201.7937266031901,715.695068359375,181.16592407226562" fill="none" stroke-width="5" stroke="url(&quot;#SvgjsLinearGradient1000&quot;)" stroke-linecap="round" stroke-dasharray="0 0"></path><defs><linearGradient id="SvgjsLinearGradient1000"><stop stop-color="hsl(37, 99%, 67%)" offset="0"></stop><stop stop-color="hsl(316, 73%, 52%)" offset="1"></stop></linearGradient></defs></svg>
     <script>
-        gsap.to('.box',{
+        gsap.timeline({
+            scrollTrigger:{
+                markers: true,
+                trigger:'svg',
+                scrub: true,
+                start:'top 5%',
+                end:'bottom 5%'
+            }
+        })
+        .to('.box',{
             motionPath:{
                 path:'#path',
                 align: '#path',
                 alignOrigin:[0.5,0.5],
                 autoRotate:true
             },
-            ease:'none',
-            duration: 10,
-            repeat: -1,
-            yoyo: true,
+            // ease:'none',
+            // duration: 10,
+            // repeat: -1,
+            // yoyo: true,
         })
     </script>
 </body>
