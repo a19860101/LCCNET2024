@@ -30,7 +30,6 @@
             width: min(1200px ,90%);
             height: 100%;
             position: relative;
-            /* background-color: #ccc; */
             margin-inline: auto;
         }
         .right {
@@ -45,6 +44,25 @@
             left: 200px;
             rotate: 45deg;
         }
+        h2 {
+            position: absolute;
+            inset:0;
+            margin: auto;
+            font-size: 120px;
+            width: fit-content;
+            height: fit-content;
+            z-index: 5;
+            color: #63ffbe;
+        }
+        .s3-right {
+            position: absolute;
+            right: 0;
+            top: 20%;
+            z-index: 4;
+        }
+        #s3 {
+            background-color: #ffa735;
+        }
     </style>
 </head>
 <body>
@@ -53,11 +71,16 @@
     </header>
     <section id="s2">
         <div class="container">
-            <img src="images//left.png" alt="" class="left">
-            <img src="images//right.png" alt="" class="right">
+            <img src="images/left.png" alt="" class="left">
+            <img src="images/right.png" alt="" class="right">
         </div>
     </section>
-    <section id="s3"></section>
+    <section id="s3">
+        <div class="container">
+            <h2>HELLO</h2>
+            <img src="images/right.png" alt="" class="s3-right">
+        </div>
+    </section>
     <script>
         gsap.to('h1',{
             scrollTrigger:{
@@ -77,7 +100,7 @@
                 trigger:'#s2',
                 start:'top 100%',
                 scrub:true,
-                markers: true
+                // markers: true
             }
         })
         .from('.right',{y:100})
