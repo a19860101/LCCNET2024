@@ -156,11 +156,16 @@ git reset HEAD^
 git reset --hard 版本號
 ```
 ### 下載
+當遠端檔案比本地檔案新的時候，可使用pull更新本地檔案
 ```bash=
 git pull origin master
-
+```
+若push時有用-u，則可省略 origin master
+```bash=
+git pull
 ```
 ### 取得儲存庫
+當電腦內沒有你的專案時，可用clone將專案複製下來
 ```bash=
 git clone 儲存庫位置
 ```
